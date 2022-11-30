@@ -1,6 +1,11 @@
 # ProyectoViviendasFelipe
 ## Proyecto en C# y Angular
 
+~~~
+En una rama a parte estarán los Test de la API.
+Y en otra el registro de usuario y el login si me da tiempo.
+~~~
+
 ### Entidades
 ~~~
 Proyecto con una Entidad Vivienda la cuál tiene unos atributos y una lista de entidades Reserva.
