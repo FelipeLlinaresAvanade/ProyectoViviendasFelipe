@@ -1,0 +1,43 @@
+<div class='card'>
+  <div class='card-header'>
+    {{pageTitle + ': ' + vivienda?.name}}
+  </div>
+
+  <div class='card-body'>
+    <button type="button" class="btn btn-primary" [routerLink]="['/viviendas', vivienda?.id, 'reservaCreate']">Crear Nueva Reserva</button>
+    <div class='table-responsive'>
+      <table class='table'
+             *ngIf='reservas.length'>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nombre Usuario</th>
+            <th>Fecha Inicio</th>
+            <th>Fecha Fin</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let reserva of reservas'>
+            <td>{{ reserva.id }}</td>
+            <td>{{ reserva.nameUsuario}}</td>
+            <td>{{ reserva.fechaInicio }}</td>
+            <td>{{ reserva.fechaFin }}</td>
+            <td>
+              <button type="button" class="btn btn-danger" (click)='onDelete(vivienda.id, reserva.id)'>Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            style='width:80px'
+            (click)='onBack()'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+</div>

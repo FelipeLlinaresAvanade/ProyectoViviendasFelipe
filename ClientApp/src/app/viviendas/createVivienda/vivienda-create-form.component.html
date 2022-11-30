@@ -1,0 +1,61 @@
+
+<div class="card">
+  <div class='card-header'>
+    Nueva Vivienda
+  </div>
+  <div class='card-body'>
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+      <div class="form-group">
+        <label for="name">Nombre Vivienda</label>
+        <input id="name" name="name" class="form-control" [(ngModel)]="originalVivienda.name"
+               required #nameField="ngModel"
+               (blur)="onBlur(nameField)"
+               [class.field-error]="form.submitted && nameField.invalid"
+               width="50%">
+        <div [hidden]="!form.submitted || nameField.valid"
+             class="alert alert-danger">
+          Introduce un nombre
+        </div>
+      </div>
+      <br />
+
+      <div class="form-group">
+        <label for="propietario">Propietario</label>
+        <input type="text" width=50%
+               class="form-control"
+               [(ngModel)]="originalVivienda.propietario" name="propietario" id="propietario"
+               >
+      </div>
+      <br />
+
+      <div class="form-group">
+        <label for="direccion">Direccion</label>
+        <textarea id="direccion" name="direccion" class="form-control"
+                  rows="2" [(ngModel)]="originalVivienda.direccion"></textarea>
+      </div>
+      <br />
+
+      <div class="form-group">
+        <label for="description">Descripcion</label>
+        <textarea id="description" name="description" class="form-control"
+                  rows="3" [(ngModel)]="originalVivienda.description"></textarea>
+      </div>
+      <br />
+
+      <div [hidden]="!postError"
+           class="alert alert-danger">
+        {{ postErrorMessage }}
+      </div>
+      <button class="btn btn-primary">Crear Vivienda</button>
+    </form>
+   
+  </div>
+  <div class='card-footer'>
+    <button class='btn btn-outline-secondary'
+            style='width:80px'
+            (click)='onBack()'>
+      <i class='fa fa-chevron-left'></i> Back
+    </button>
+  </div>
+</div>
