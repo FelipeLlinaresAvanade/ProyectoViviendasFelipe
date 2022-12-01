@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
 
 using Microsoft.AspNetCore.Mvc;
-using ProyectoFinal.Entities;
-using ProyectoFinal.Models;
-using ProyectoFinal.Services;
+using ProyectoViviendasFelipe.Entities;
+using ProyectoViviendasFelipe.Models;
+using ProyectoViviendasFelipe.Services;
 using System.Text.Json;
 
-namespace ProyectoFinal.Controllers
+namespace ProyectoViviendasFelipe.Controllers
 {
     [Route("api/viviendas")]
     [ApiController]
@@ -79,7 +79,7 @@ namespace ProyectoFinal.Controllers
             {
                 return NotFound();
             }
-            return Ok(_mapper.Map<IEnumerable<ViviendaSinReservasDto>>(viviendaEntities));
+            return Ok(_mapper.Map<ViviendaSinReservasDto>(viviendaEntities));
         }
 
         [HttpPost]
@@ -87,7 +87,7 @@ namespace ProyectoFinal.Controllers
                ViviendaSinReservasDto vivienda)
         {
 
-            var finalVivienda = _mapper.Map<Entities.Vivienda>(vivienda);
+            var finalVivienda = _mapper.Map<Vivienda>(vivienda);
 
             _viviendaInfoRepository.AddVivienda(finalVivienda);
 

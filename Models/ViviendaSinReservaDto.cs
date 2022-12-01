@@ -1,4 +1,4 @@
-﻿namespace ProyectoFinal.Models
+﻿namespace ProyectoViviendasFelipe.Models
 {
     public class ViviendaSinReservasDto
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace ProyectoFinal.Profiles
+namespace ProyectoViviendasFelipe.Profiles
 {
     public class ViviendaProfile : Profile
     {
@@ -9,6 +9,7 @@ namespace ProyectoFinal.Profiles
             CreateMap<Entities.Vivienda, Models.ViviendaSinReservasDto>();
             CreateMap<Entities.Vivienda, Models.ViviendaDto>();
             CreateMap<Models.ViviendaSinReservasDto,Entities.Vivienda>();
+            CreateMap<Models.ViviendaDto, Entities.Vivienda>();
         }
     }
 }
