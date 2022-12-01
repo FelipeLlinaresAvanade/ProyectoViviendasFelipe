@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProyectoFinal.DbContexts;
-using ProyectoFinal.Entities;
+using ProyectoViviendasFelipe.DbContexts;
+using ProyectoViviendasFelipe.Entities;
 
-namespace ProyectoFinal.Services
+namespace ProyectoViviendasFelipe.Services
 {
     
         public class ViviendaInfoRepository : IViviendaInfoRepository

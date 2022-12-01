@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace ProyectoFinal.Entities
+namespace ProyectoViviendasFelipe.Entities
 {
     public class Reserva
     {

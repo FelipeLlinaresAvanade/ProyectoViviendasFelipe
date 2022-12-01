@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.EntityFrameworkCore;
-using ProyectoFinal.DbContexts;
-using ProyectoFinal.Services;
+using ProyectoViviendasFelipe.DbContexts;
+using ProyectoViviendasFelipe.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using ProyectoFinal.Entities;
+using ProyectoViviendasFelipe.Entities;
 
-namespace ProyectoFinal.DbContexts
+namespace ProyectoViviendasFelipe.DbContexts
 {
     
        public class ViviendaInfoContext : DbContext

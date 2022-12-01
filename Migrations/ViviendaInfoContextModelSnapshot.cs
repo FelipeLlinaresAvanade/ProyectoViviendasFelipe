@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProyectoFinal.DbContexts;
+using ProyectoViviendasFelipe.DbContexts;
 
 #nullable disable
 
@@ -16,7 +16,7 @@ namespace ProyectoViviendasFelipe.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.0");
 
-            modelBuilder.Entity("ProyectoFinal.Entities.Reserva", b =>
+            modelBuilder.Entity("ProyectoViviendasFelipe.Entities.Reserva", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -77,7 +77,7 @@ namespace ProyectoViviendasFelipe.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ProyectoFinal.Entities.Vivienda", b =>
+            modelBuilder.Entity("ProyectoViviendasFelipe.Entities.Vivienda", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -121,9 +121,9 @@ namespace ProyectoViviendasFelipe.Migrations
                         });
                 });
 
-            modelBuilder.Entity("ProyectoFinal.Entities.Reserva", b =>
+            modelBuilder.Entity("ProyectoViviendasFelipe.Entities.Reserva", b =>
                 {
-                    b.HasOne("ProyectoFinal.Entities.Vivienda", "Vivienda")
+                    b.HasOne("ProyectoViviendasFelipe.Entities.Vivienda", "Vivienda")
                         .WithMany("Reservas")
                         .HasForeignKey("ViviendaId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -132,7 +132,7 @@ namespace ProyectoViviendasFelipe.Migrations
                     b.Navigation("Vivienda");
                 });
 
-            modelBuilder.Entity("ProyectoFinal.Entities.Vivienda", b =>
+            modelBuilder.Entity("ProyectoViviendasFelipe.Entities.Vivienda", b =>
                 {
                     b.Navigation("Reservas");
                 });

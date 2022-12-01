@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace ProyectoFinal.Profiles
+namespace ProyectoViviendasFelipe.Profiles
 {
     public class ReservaProfile : Profile
     {

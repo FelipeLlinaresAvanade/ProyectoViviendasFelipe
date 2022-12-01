@@ -1,4 +1,4 @@
-﻿namespace ProyectoFinal.Services
+﻿namespace ProyectoViviendasFelipe.Services
 {
     public class PaginationMetadata
     {

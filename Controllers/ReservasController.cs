@@ -1,11 +1,11 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using ProyectoFinal.Entities;
-using ProyectoFinal.Models;
-using ProyectoFinal.Services;
+using ProyectoViviendasFelipe.Entities;
+using ProyectoViviendasFelipe.Models;
+using ProyectoViviendasFelipe.Services;
 
-namespace ProyectoFinal.Controllers
+namespace ProyectoViviendasFelipe.Controllers
 {
         [ApiController]
         [Route("api/viviendas/{viviendaId}/reservas")]

@@ -1,11 +1,11 @@
-﻿using ProyectoFinal.Entities;
+﻿using ProyectoViviendasFelipe.Entities;
 
-namespace ProyectoFinal.Services
+namespace ProyectoViviendasFelipe.Services
 {
     public interface IViviendaInfoRepository
     {
         Task<IEnumerable<Vivienda>> GetViviendasAsync();
-        Task<(IEnumerable<Vivienda>, PaginationMetadata)> GetViviendasAsync(int pageSize, int pageNumber);
+        Task<(IEnumerable<Vivienda>, PaginationMetadata)> GetViviendasAsync(int pageNumber, int pageSize);
         Task<Vivienda?> GetViviendaAsync(int viviendaId, bool includeReservas);
         Task<(IEnumerable<Vivienda>, int)> GetViviendasAsync(string name);
         void AddVivienda(Vivienda vivienda);
