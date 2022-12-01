@@ -3,7 +3,6 @@
 
 ~~~
 En esta rama están algunos de los Test de los controllers y de los repositorios.
-Y en otra el registro de usuario y el login si me da tiempo.
 ~~~
 
 ### Entidades
